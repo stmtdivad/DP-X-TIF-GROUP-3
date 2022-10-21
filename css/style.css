@@ -1,0 +1,478 @@
+/* CSS RESET */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("../assets/fonts/AlegreyaSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Barriecito Regular";
+    src: url("../assets/fonts/Barriecito-Regular.woff");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* BODY */
+
+body {
+    margin-top: 3rem;
+}
+
+.container {
+    margin: 0 3rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: hsla(41, 75%, 71%, 1);
+    z-index: 10000000;
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+.right {
+}
+
+.nav-item {
+    margin: 0.5rem 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: hsla(0, 0%, 35%, 1);
+    font-family: "Alegreya Sans";
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.search_input {
+    border: 2px solid #64655f;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.nav-btn {
+    display: flex;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn-img {
+    width: 25px;
+    height: 25px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+    height: 70vh;
+    z-index: 100;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/assets/Untitled.png");
+    background-size: cover;
+    background-position: center;
+    filter: opacity(0.5);
+    z-index: -1;
+}
+
+.hero-desc {
+    font-family: "Alegreya Sans";
+    font-size: 38px;
+    max-width: 50%;
+}
+
+.langganan {
+    font-family: "Alegreya Sans";
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 1rem;
+}
+
+.langganan-title {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.langganan-price {
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.product-container {
+    background-color: #8cb9c0;
+}
+
+.product {
+    padding: 4.5rem 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 81px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title-product-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background-color: #fff;
+    padding: 0.2rem 1.4rem;
+}
+
+.title-product {
+    font-family: "Alegreya Sans";
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 48px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    row-gap: 5px;
+    background-color: #e9b9aa;
+    border-radius: 40px;
+    align-items: center;
+}
+
+.img-card {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+
+.title-card {
+    font-family: "Barriecito Regular";
+    font-size: 25px;
+}
+
+.subtitle-card {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.desc-card {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.review-panel {
+    background-color: #edca7f;
+}
+
+.review {
+    padding: 4.5rem 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.review-cards {
+    display: flex;
+    margin: 3rem;
+    justify-content: space-between;
+    column-gap: 58px;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    row-gap: 5px;
+    background-color: white;
+    border-radius: 40px;
+    align-items: center;
+}
+
+.rev-img-card {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+
+.star {
+    width: 40%;
+    height: 120px;
+    object-fit: contain;
+}    
+
+.rev-card {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0.6rem 0;
+}
+
+.assist-container {
+    background-color: #8cb9c0;
+}
+
+.assist {
+    padding: 10rem;
+    display: flex;
+    flex-direction: row;
+    row-gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.assistant {
+    width: 100%;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: contain;
+}    
+
+.va-intro {
+    font-family: "Alegreya Sans";
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.va-sub {
+    font-family: "Inter";
+    text-align:  center;
+}
+
+.assist-text{
+    float: right;
+    width: 100%;
+}
+
+.faq-container {
+    background-color: #E9B9AA;
+}
+
+.title-faq-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background-color: #fff;
+    padding: 0.2rem 1.4rem;
+}
+
+.faq {
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.faq-items {
+    justify-content: space-between;
+    column-gap: 48px;
+}
+
+.faq-item {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    font-family: "Inter";
+    font-size: x-large;
+    width: 80rem;
+    background-color: #8CB9C0;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.load-more{
+    text-align:  center;
+    text-decoration: underline;
+}
+
+.footer{
+    background-color: hsla(41, 75%, 71%, 1);
+    align-items: center;
+    padding: 1rem;
+}
+
+.footbar {
+    display: flex;
+    column-gap: 10rem;
+    align-items: center;
+}
+
+.foot-item {
+    margin: 2rem 6rem;
+    text-decoration: underline;
+}
+
+.newsletter {
+    width: 250px;
+    align-items: center;
+}
